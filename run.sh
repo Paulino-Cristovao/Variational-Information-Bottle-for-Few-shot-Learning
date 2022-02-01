@@ -14,7 +14,7 @@ for LATENT in $LATENT_LIST ; do
 for BETA in $BETA_LIST ; do
 
 
-#python pretrain.py --latent $LATENT --beta_value $BETA --lr $LR
+python pretrain.py --latent $LATENT --beta_value $BETA --lr $LR
 python imprint.py --model $LATENT/$BETA/pretrain_checkpoint/model_best.pth.tar --beta_value $BETA --latent $LATENT --num-sample $NUMBER_SAMPLES
 
 done;
